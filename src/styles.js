@@ -1,3 +1,5 @@
+import { css } from "styled-components";
+
 export const setColor = {
   primaryColor: "#af9a7d",
   mainWhite: "#fff",
@@ -28,3 +30,38 @@ export const setBackground = ({
       url(${img}) center/cover fixed no-repeat;
   `;
 };
+
+export const setRem = (number = 16) => {
+  return `
+    ${number / 16}rem
+  `;
+};
+
+export const setLetterSpacing = (number = 2) => {
+  return `letter-spacing: ${number}px`;
+};
+
+export const setBorder = ({
+  width = "2px",
+  style = "solid",
+  color = "black",
+} = {}) => {
+  return `border: ${width} ${style} ${color}`;
+};
+
+const sizes = {
+  large: 1200,
+  desktop: 992,
+  tablet: 768,
+  phone: 576,
+};
+
+//Iterate through the sizes and create a media template
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (min-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `;
+  return acc;
+}, {});
