@@ -65,3 +65,11 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   `;
   return acc;
 }, {});
+
+export const setTransition = ({
+  property='all',
+  time='0.2s',
+  motion='ease-in-out'
+} = {}) => {
+  return `transition: ${property} ${time} ${motion}`
+}
