@@ -33,20 +33,25 @@ const AboutCenter = styled.div`
   width: 90vw;
   margin: 0 auto;
   ${media.desktop`
+    .about-img,
+    .about-info {
+      padding: ${setRem(0)};
+    }
     width: 100vw;
     max-width: 1170px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: ${setRem(32)};
+    grid-column-gap: ${setRem(60)};
     
-    .about-img {
+    .about-img, .about-info {
       align-self: center;
     }
-    /* .about-info {
-      p{
-        width: 90%;
-      }
-    } */
+    .about-info {
+      padding-left: ${setRem(50)};
+      /* p{
+        width: 80%;
+      } */
+    }
   `}
 `;
 

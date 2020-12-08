@@ -28,3 +28,7 @@ export const PrimaryBtn = styled.button`
   text-decoration:none;
   cursor: pointer;
 `;
+
+export const SmallBtn = styled(PrimaryBtn)`
+  padding: ${setRem(9)} ${setRem(12)};
+`
