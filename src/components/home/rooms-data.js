@@ -2,7 +2,7 @@ import room1 from "../../images/room1.jpeg";
 import room2 from "../../images/room2.jpeg";
 import room3 from "../../images/room3.jpeg";
 
-export default [
+const rooms = [
   {
     id: 1,
     img: room1,
@@ -28,3 +28,5 @@ export default [
     price: 375
   }
 ];
+
+export default rooms
